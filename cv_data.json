@@ -1,0 +1,36 @@
+{
+    "personal": {
+        "name": "samuel rodriguez",
+        "title": "Senior Security Researcher & Penetration Tester",
+        "summary": "Specialized in identifying vulnerabilities in complex distributed systems. Over 8 years of experience in Red Teaming, reverse engineering, and developing custom exploits. Committed to hardening infrastructure through rigorous offensive security testing."
+    },
+    "experience":[
+        {
+            "role": "Lead Penetration Tester",
+            "company": "CyberDyne Systems",
+            "period": "2022 - Present",
+            "description": "Led a team of 5 red teamers conducting advanced persistent threat (APT) simulations against enterprise financial institutions. Developed custom C2 infrastructure bypassing modern EDR solutions."
+        },
+        {
+            "role": "Security Analyst",
+            "company": "TechGuard Inc",
+            "period": "2019 - 2022",
+            "description": "Performed regular vulnerability assessments and source code reviews for Fortune 500 clients. Automated CI/CD security pipelines using Python and Bash, reducing critical vulnerabilities in production by 40%."
+        }
+    ],
+    "skills":[
+        "Red Teaming",
+        "Reverse Engineering",
+        "Cryptography",
+        "Python / Bash / C",
+        "Burp Suite Pro",
+        "OSCP Certified",
+        "Network Forensics",
+        "Cloud Security (AWS)"
+    ],
+    "contact": {
+        "email": "alex.mercer@protonmail.com",
+        "github": "github.com/alexmercer-sec",
+        "linkedin": "linkedin.com/in/alexmercer-sec"
+    }
+}

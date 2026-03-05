@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samuel Rodríguez | Cybersecurity Analyst (SOC / Pentesting)</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./styles.css">
+  <script>
+tailwind.config = {
+    darkMode: 'class',
+    theme: {
+        extend: {
+            colors: {
+                cyber: {
+                    base: '#050505',
+                    surface: '#0f0f0f',
+                    border: '#1f1f1f',
+                    accent: '#00ff66',
+                    muted: '#9ca3af'
+                }
+            },
+            fontFamily: {
+                sans:['Inter', 'sans-serif'],
+                mono: ['JetBrains Mono', 'monospace']
+            }
+        }
+    }
+}
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-cyber-base text-gray-200 font-sans antialiased selection:bg-cyber-accent selection:text-black scroll-smooth">
+<div class="cyber-background"></div>
+<script>
+window.addEventListener('load', () => {
+    document.body.classList.add('loaded');
+});
+</script>
+
+<!-- NAV -->
+<nav>
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+        <div class="font-mono text-cyber-accent font-bold text-lg tracking-wider">
+            samuel@security:~#
+        </div>
+
+        <div class="hidden md:flex space-x-8 font-mono text-sm">
+            <a href="#about" class="nav-link active">whoami</a>
+            <a href="#experience" class="nav-link">experience</a>
+            <a href="#education" class="nav-link">education</a>
+            <a href="#skills" class="nav-link">skills</a>
+            <a href="#contact" class="nav-link">contact</a>
+        </div>
+    </div>
+</nav>
+
+<section class="min-h-[75vh] flex flex-col justify-center items-center text-center fade-in px-4">
+
+    <div class="hero-badge mb-8">
+        <span class="pulse-dot"></span>
+        AVAILABLE FOR SOC / JUNIOR CYBERSECURITY ROLE
+    </div>
+
+    <div class="hero-glass-card">
+        <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
+            Samuel Rodríguez
+        </h1>
+
+        <div class="hero-divider"></div>
+
+        <p class="hero-description-expanded">
+            Analista de seguridad especializado en un perfil híbrido de SOC / Blue Team y Pentesting Web. 
+            Formado como desarrollador Fullstack, aporto una visión integral para identificar vulnerabilidades 
+            desde el código hasta la infraestructura, combinando técnicas ofensivas con estrategias de 
+            defensa activa y respuesta a incidentes en entornos modernos.
+        </p>
+
+        <div class="hero-tags mt-6">
+            <span>> Blue team Soc</span>
+            <span>> Penetration Tester</span>
+            <span>> Web Security</span>
+        </div>
+    </div>
+</section>
+
+
+<!-- ABOUT -->
+<section id="about" class="py-24 border-t border-cyber-border fade-in">
+
+    <h2 class="font-mono text-cyber-accent text-xl mb-12 tracking-wider">
+        whoami
+    </h2>
+
+    <div class="about-card">
+
+        <p class="leading-relaxed text-gray-300 mb-6">
+            Profesional en formación con enfoque en Seguridad Defensiva y Ofensiva.
+            Experiencia en laboratorios virtuales y entornos controlados simulando escenarios reales
+            de ataque y respuesta a incidentes.
+        </p>
+
+        <p class="leading-relaxed text-gray-300 mb-6">
+            Capacitado en:
+        </p>
+
+        <ul class="space-y-3 text-cyber-muted text-sm">
+            <li>• Triage y análisis inicial de incidentes de seguridad.</li>
+            <li>• Clasificación de técnicas bajo MITRE ATT&CK.</li>
+            <li>• Evaluación de vulnerabilidades OWASP Top 10.</li>
+            <li>• Hardening básico en entornos Active Directory.</li>
+            <li>• Desarrollo backend seguro (Node.js + SQL).</li>
+        </ul>
+
+        <div class="mt-8 border-t border-cyber-border pt-6 text-sm text-cyber-muted">
+            Mentalidad analítica, enfoque estructurado y documentación técnica clara.
+        </div>
+
+    </div>
+
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="py-20 border-t border-cyber-border relative">
+
+<div class="relative max-w-5xl mx-auto space-y-16">
+<!-- timeline-->
+ <div class="timeline-line hidden md:block"></div>
+    
+    <!-- BLUE TEAM -->
+        <div class="relative md:pl-12 group">
+            <div class="absolute left-2 top-2 w-4 h-4 bg-cyber-accent rounded-full shadow-lg shadow-cyber-accent/50 hidden md:block"></div>
+
+            <div class="experience-card">
+                <h3 class="text-white text-lg font-semibold mb-4">
+                    🛡 Blue Team / SOC Simulation
+                </h3>
+
+                <ul class="experience-list">
+                    <li>Detección de ataques de fuerza bruta, phishing y malware mediante análisis avanzado de logs.</li>
+                    <li>Clasificación de TTPs utilizando framework MITRE ATT&CK.</li>
+                    <li>Triage inicial y documentación técnica estructurada de incidentes simulados.</li>
+                    <li>Análisis de tráfico con Wireshark + OSINT tools (VirusTotal, Any.Run).</li>
+                    <li>Hardening básico en entornos Active Directory y segmentación de red.</li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!-- RED TEAM -->
+        <div class="relative md:pl-12 group">
+            <div class="absolute left-2 top-2 w-4 h-4 bg-cyber-accent rounded-full shadow-lg shadow-cyber-accent/50 hidden md:block"></div>
+
+            <div class="experience-card">
+                <h3 class="text-white text-lg font-semibold mb-4">
+                    ⚔ Pentesting & Red Team Practice
+                </h3>
+
+                <ul class="experience-list">
+                    <li>Reconocimiento y enumeración avanzada con Nmap y técnicas OSINT.</li>
+                    <li>Explotación de vulnerabilidades OWASP Top 10 (SQLi, XSS, Broken Auth).</li>
+                    <li>Uso profesional de Metasploit y Burp Suite.</li>
+                    <li>Simulación de Password Spraying, Kerberoasting y ataques AD.</li>
+                    <li>Redacción de informes técnicos de pentest con evidencia y mitigación.</li>
+                </ul>
+            </div>
+        </div>
+
+     <!-- DEVELOPMENT & LABS -->
+<div class="relative md:pl-12 group">
+    <div class="absolute left-2 top-2 w-4 h-4 bg-cyber-accent rounded-full shadow-lg shadow-cyber-accent/50 hidden md:block"></div>
+
+    <div class="experience-card">
+        <h3 class="text-white text-lg font-semibold mb-8">
+            💻 Development & Security Labs
+        </h3>
+
+        <!-- ===================== -->
+        <!-- GITHUB PROJECTS -->
+        <!-- ===================== -->
+
+        <div class="space-y-6 text-sm mb-12">
+
+            <div class="project-card">
+                <p class="text-cyber-accent font-mono text-base">
+                    ProyectoIA-Web-Pentest
+                </p>
+                <p class="text-cyber-muted mt-2">
+                    Aplicación orientada a testing web y análisis automatizado de seguridad en APIs.
+                    Implementación de validaciones, análisis de endpoints y enfoque en vulnerabilidades OWASP Top 10.
+                </p>
+                <a href="https://github.com/S4muel-Rodriguez/ProyectoIA-Web-Pentest"
+                   target="_blank"
+                   class="project-link">
+                    View Repository →
+                </a>
+            </div>
+
+            <div class="project-card">
+                <p class="text-cyber-accent font-mono text-base">
+                    Proyectback3
+                </p>
+                <p class="text-cyber-muted mt-2">
+                    Backend seguro desarrollado en Node.js + SQL.
+                    Implementación de autenticación, validación de datos,
+                    protección de endpoints y arquitectura estructurada.
+                </p>
+                <a href="https://github.com/S4muel-Rodriguez/Proyectback3"
+                   target="_blank"
+                   class="project-link">
+                    View Repository →
+                </a>
+            </div>
+
+        </div>
+
+        <!-- ===================== -->
+        <!-- SECURITY LABS -->
+        <!-- ===================== -->
+
+        <h4 class="text-cyber-accent font-mono text-sm mb-6 tracking-wider">
+            Practical Offensive & Defensive Labs
+        </h4>
+
+        <div class="grid md:grid-cols-2 gap-6 text-sm">
+
+            <!-- Metasploitable -->
+            <div class="lab-card">
+                <p class="lab-title">Metasploitable 2 (Linux Lab)</p>
+                <p class="lab-desc">
+                    Explotación de servicios vulnerables (FTP, SMB, RCE),
+                    enumeración avanzada, privilege escalation y post-explotación en entorno Linux.
+                </p>
+                <a href="https://sourceforge.net/projects/metasploitable/"
+                   target="_blank"
+                   class="lab-link">
+                    Official Lab →
+                </a>
+            </div>
+
+            <!-- Windows Server AD -->
+            <div class="lab-card">
+                <p class="lab-title">Windows Server / Active Directory Lab</p>
+                <p class="lab-desc">
+                    Implementación de entorno Active Directory con dominio controlado.
+                    Simulación de Password Spraying, enumeración LDAP/SMB,
+                    análisis de eventos y hardening básico.
+                </p>
+                <a href="https://www.microsoft.com/es-mx/evalcenter/evaluate-windows-server-2025"
+                   target="_blank"
+                   class="lab-link">
+                    Evaluation Version →
+                </a>
+            </div>
+
+            <!-- Hack The Box -->
+            <div class="lab-card">
+                <p class="lab-title">Hack The Box Machines</p>
+                <p class="lab-desc">
+                    Resolución de máquinas Linux y Windows aplicando
+                    técnicas de enumeración, explotación web, pivoting
+                    y escalada de privilegios.
+                </p>
+                <a href="https://app.hackthebox.com/machines"
+                   target="_blank"
+                   class="lab-link">
+                    View Platform →
+                </a>
+            </div>
+
+            <!-- CTF -->
+            <div class="lab-card">
+                <p class="lab-title">Hack The Box CTF Events</p>
+                <p class="lab-desc">
+                    Participación en desafíos de Web Exploitation,
+                    Forensics y Cryptography en entornos competitivos.
+                </p>
+                <a href="https://ctf.hackthebox.com/events/live"
+                   target="_blank"
+                   class="lab-link">
+                    View Events →
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- EDUCATION & CERTIFICATIONS -->
+<section id="education" class="py-20 border-t border-cyber-border">
+    <h2 class="font-mono text-cyber-accent text-xl mb-12">
+        Education & Certifications
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-10 text-sm">
+
+        <!-- FULL STACK -->
+        <div class="bg-cyber-surface border border-cyber-border rounded-lg p-8 hover:border-cyber-accent transition-all duration-300">
+            <h3 class="text-white text-lg font-semibold mb-2">
+                🎓 Full Stack Web Development (750h)
+            </h3>
+            <p class="text-cyber-muted mb-4">
+                Coderhouse — React, Node.js, APIs REST, SQL, Docker, Git.
+            </p>
+            <a href="../website/img/Certificado desarrollo web fullstack.jpg"
+               target="_blank"
+               class="inline-block px-5 py-2 bg-cyber-accent text-black font-mono text-xs font-bold rounded hover:bg-white transition-colors">
+               VIEW_CERTIFICATE
+            </a>
+            <div class="mt-6">
+                <img src="./img/Certificado desarrollo web fullstack.jpg"
+                     alt="Certificado Full Stack"
+                     class="rounded border border-cyber-border max-h-40 hover:scale-105 transition-transform duration-300 cursor-pointer">
+            </div>
+        </div>
+
+
+        <!-- CIBERSEGURIDAD CODERHOUSE -->
+        <div class="bg-cyber-surface border border-cyber-border rounded-lg p-8 hover:border-cyber-accent transition-all duration-300">
+            <h3 class="text-white text-lg font-semibold mb-2">
+                🔐 Ciberseguridad (Coderhouse)
+            </h3>
+            <p class="text-cyber-muted mb-4">
+                Gestión de vulnerabilidades, análisis de malware, tráfico de red y elaboración de reportes técnicos.
+            </p>
+            <a href="../website/img/certificado-ciberseguridad-coderohuse.jpg"
+               target="_blank"
+               class="inline-block px-5 py-2 bg-cyber-accent text-black font-mono text-xs font-bold rounded hover:bg-white transition-colors">
+               VIEW_CERTIFICATE
+            </a>
+            <div class="mt-6">
+                <img src="./img/certificado-ciberseguridad-coderohuse.jpg"
+                     alt="Certificado Ciberseguridad Coderhouse"
+                     class="rounded border border-cyber-border max-h-40 hover:scale-105 transition-transform duration-300 cursor-pointer">
+            </div>
+        </div>
+
+
+        <!-- CIBERSEGURIDAD DEFENSIVA & OFENSIVA -->
+        <div class="bg-cyber-surface border border-cyber-border rounded-lg p-8 hover:border-cyber-accent transition-all duration-300">
+            <h3 class="text-white text-lg font-semibold mb-2">
+                🛡 Ciberseguridad Defensiva & Ofensiva
+            </h3>
+            <p class="text-cyber-muted mb-4">
+                SOC Analyst, MITRE ATT&CK, Pentesting Web, Active Directory, OWASP Top 10.
+            </p>
+            <a href="../website/img/Curso avanzado de hacking etico y ciberseguridad udemy.jpg"
+               target="_blank"
+               class="inline-block px-5 py-2 bg-cyber-accent text-black font-mono text-xs font-bold rounded hover:bg-white transition-colors">
+               VIEW_CERTIFICATE
+            </a>
+            <div class="mt-6">
+                <img src="./img/Curso avanzado de hacking etico y ciberseguridad udemy.jpg"
+                     alt="Certificado Ciberseguridad Defensiva y Ofensiva"
+                     class="rounded border border-cyber-border max-h-40 hover:scale-105 transition-transform duration-300 cursor-pointer">
+            </div>
+        </div>
+
+
+        <!-- BACKEND 3 -->
+        <div class="bg-cyber-surface border border-cyber-border rounded-lg p-8 hover:border-cyber-accent transition-all duration-300">
+            <h3 class="text-white text-lg font-semibold mb-2">
+                ⚙ Backend 3 (Node.js & Arquitectura)
+            </h3>
+            <p class="text-cyber-muted mb-4">
+                Desarrollo backend avanzado con Node.js, arquitectura de APIs,
+                validaciones, autenticación y buenas prácticas de seguridad.
+            </p>
+            <a href="../website/img/certificado backend3escalabilidadytesting.jpg"
+               target="_blank"
+               class="inline-block px-5 py-2 bg-cyber-accent text-black font-mono text-xs font-bold rounded hover:bg-white transition-colors">
+               VIEW_CERTIFICATE
+            </a>
+            <div class="mt-6">
+                <img src="./img/certificado backend3escalabilidadytesting.jpg"
+                     alt="Certificado Backend 3"
+                     class="rounded border border-cyber-border max-h-40 hover:scale-105 transition-transform duration-300 cursor-pointer">
+            </div>
+        </div>
+
+
+        <!-- IA PROMPT ENGINEERING -->
+        <div class="bg-cyber-surface border border-cyber-border rounded-lg p-8 hover:border-cyber-accent transition-all duration-300">
+            <h3 class="text-white text-lg font-semibold mb-2">
+                🤖 IA Prompt Engineering
+            </h3>
+            <p class="text-cyber-muted mb-4">
+                Automatización de tareas de ciberseguridad e investigación de amenazas mediante IA.
+            </p>
+            <a href="../website/img/certificado ia prompt avanzado.png"
+               target="_blank"
+               class="inline-block px-5 py-2 bg-cyber-accent text-black font-mono text-xs font-bold rounded hover:bg-white transition-colors">
+               VIEW_CERTIFICATE
+            </a>
+            <div class="mt-6">
+                <img src="./img/certificado ia prompt avanzado.png"
+                     alt="Certificado IA Prompt Engineering"
+                     class="rounded border border-cyber-border max-h-40 hover:scale-105 transition-transform duration-300 cursor-pointer">
+            </div>
+        </div>
+
+
+        <!-- SCRUM -->
+        <div class="bg-cyber-surface border border-cyber-border rounded-lg p-8 hover:border-cyber-accent transition-all duration-300">
+            <h3 class="text-white text-lg font-semibold mb-2">
+                📋 Metodología Ágil Scrum
+            </h3>
+            <p class="text-cyber-muted mb-4">
+                Fundamentos de Scrum, gestión de backlog, planificación de sprints
+                y trabajo colaborativo en entornos ágiles.
+            </p>
+            <a href="../website/img/curso de metodologias agiles scrum gestion de proyecto de forma agil udemy.jpg"
+               target="_blank"
+               class="inline-block px-5 py-2 bg-cyber-accent text-black font-mono text-xs font-bold rounded hover:bg-white transition-colors">
+               VIEW_CERTIFICATE
+            </a>
+            <div class="mt-6">
+                <img src="./img/curso de metodologias agiles scrum gestion de proyecto de forma agil udemy.jpg"
+                     alt="Certificado Scrum"
+                     class="rounded border border-cyber-border max-h-40 hover:scale-105 transition-transform duration-300 cursor-pointer">
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="py-20 border-t border-cyber-border">
+    <h2 class="font-mono text-cyber-accent text-xl mb-8 text-center">Technical Skills</h2>
+
+    <div class="space-y-12">
+
+        <!-- BLUE TEAM / SOC -->
+        <div>
+            <h3 class="text-cyber-accent font-mono text-lg mb-4">💠 Blue Team / SOC</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm font-mono">
+                <div class="skill-card">SIEM</div>
+                <div class="skill-card">MITRE ATT&CK</div>
+                <div class="skill-card">Log Analysis (Win/Linux)</div>
+                <div class="skill-card">Wireshark</div>
+                <div class="skill-card">Nmap</div>
+                <div class="skill-card">Endpoint Security</div>
+                <div class="skill-card">Traffic Analysis</div>
+                <div class="skill-card">Sysmon / ELK</div>
+            </div>
+        </div>
+
+        <!-- PENTESTING / RED TEAM -->
+        <div>
+            <h3 class="text-cyber-accent font-mono text-lg mb-4">⚔ Pentesting / Red Team</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm font-mono">
+                <div class="skill-card">Burp Suite</div>
+                <div class="skill-card">Metasploit</div>
+                <div class="skill-card">Active Directory Pentest</div>
+                <div class="skill-card">OWASP Top 10</div>
+                <div class="skill-card">SQLi / XSS</div>
+                <div class="skill-card">Hydra / Brute Force</div>
+                <div class="skill-card">Maltego</div>
+                <div class="skill-card">SEToolkit</div>
+            </div>
+        </div>
+
+        <!-- DEVELOPMENT -->
+        <div>
+            <h3 class="text-cyber-accent font-mono text-lg mb-4">💻 Development Web</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm font-mono">
+                <div class="skill-card">JavaScript</div>
+                <div class="skill-card">Node.js</div>
+                <div class="skill-card">React</div>
+                <div class="skill-card">Python</div>
+                <div class="skill-card">REST APIs</div>
+                <div class="skill-card">SQL / Databases</div>
+                <div class="skill-card">Git & GitHub</div>
+                <div class="skill-card">Docker</div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-24 border-t border-cyber-border">
+
+    <h2 class="font-mono text-cyber-accent text-xl mb-14 text-center tracking-wider">
+        Contact
+    </h2>
+
+    <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+
+        <!-- EMAIL -->
+        <a href="mailto:samurodriguez565@gmail.com"
+           class="contact-card group">
+
+            <div class="contact-icon">
+                📧
+            </div>
+
+            <h3 class="contact-title">
+                Email
+            </h3>
+
+            <p class="contact-sub">
+                Send me a message
+            </p>
+
+        </a>
+
+
+        <!-- GITHUB -->
+        <a href="https://github.com/S4muel-Rodriguez"
+           target="_blank"
+           class="contact-card group">
+
+            <div class="contact-icon">
+                💻
+            </div>
+
+            <h3 class="contact-title">
+                GitHub
+            </h3>
+
+            <p class="contact-sub">
+                View security & development projects
+            </p>
+
+        </a>
+
+
+        <!-- LINKEDIN -->
+        <a href="https://www.linkedin.com/in/samu-rodr%C3%ADguez-77b24325a/"
+           target="_blank"
+           class="contact-card group">
+
+            <div class="contact-icon">
+                🔗
+            </div>
+
+            <h3 class="contact-title">
+                LinkedIn
+            </h3>
+
+            <p class="contact-sub">
+                Professional profile
+            </p>
+
+        </a>
+
+    </div>
+
+</section>
+
+</main>
+
+<footer class="border-t border-cyber-border py-6 text-center text-cyber-muted font-mono text-xs">
+    © 2026 Samuel Rodríguez — SOC / Pentesting
+</footer>
+
+</body>
+</html>

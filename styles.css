@@ -1,0 +1,694 @@
+/* ============================= */
+/* RESET GLOBAL */
+/* ============================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    min-height: 200vh;
+    background: #000;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* ============================= */
+/* FONDO CYBER MOVIBLE Y SOMBRAS */
+/* ============================= */
+.cyber-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("./img/websiteimg.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    filter: brightness(0.8) contrast(1.1);
+    z-index: -3;
+    animation: backgroundMove 30s ease-in-out infinite alternate;
+    transition: opacity 2s ease-in-out;
+}
+
+body.loaded .cyber-background {
+    opacity: 0.65;
+}
+
+.cyber-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        rgba(0,0,0,0.85) 0%,
+        rgba(0,0,0,0.55) 40%,
+        rgba(0,0,0,0.15) 70%,
+        rgba(0,0,0,0) 100%
+    );
+    z-index: 1;
+}
+
+.cyber-background::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 70% 40%, rgba(0,0,0,0.1), rgba(0,0,0,0.7));
+    mix-blend-mode: multiply;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-image:
+        linear-gradient(rgba(0,255,150,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,255,150,0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    z-index: -2;
+}
+
+@keyframes backgroundMove {
+    0% { transform: scale(1) translateX(0px) translateY(0px); }
+    50% { transform: scale(1.05) translateX(-20px) translateY(10px); }
+    100% { transform: scale(1.1) translateX(-40px) translateY(20px); }
+}
+
+/* ============================= */
+/* GRID CYBER FIX */
+@media (min-width: 1024px) {
+    .cyber-grid {
+        background-image: linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px);
+    }
+}
+
+/* ============================= */
+/* CONTENIDO PRINCIPAL */
+.container {
+    padding: 120px 10%;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(0,0,0,0.8);
+}
+
+p {
+    font-size: 20px;
+    max-width: 600px;
+    line-height: 1.6;
+    text-shadow: 0 0 8px rgba(0,0,0,0.7);
+}
+
+/* ============================= */
+/* SCROLLBAR ESTILO CYBER */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #050505; }
+::-webkit-scrollbar-thumb {
+    background: #1f1f1f;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover { background: #00ff66; }
+
+/* ============================= */
+/* CARDS / BLOQUES GENERALES TRANSPARENTES */
+.cyber-card,
+.skill-card,
+.experience-card,
+.project-card,
+.about-card,
+.contact-card,
+.lab-card,
+#education .bg-cyber-surface,
+.lab-section-card {
+    background-color: rgba(20,20,20,0.55);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(31,31,31,0.5);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.4s ease;
+    color: #fff;
+    overflow: hidden;
+}
+
+/* Hover uniforme y profesional */
+.cyber-card:hover,
+.skill-card:hover,
+.experience-card:hover,
+.project-card:hover,
+.about-card:hover,
+.contact-card:hover,
+.lab-card:hover,
+#education .bg-cyber-surface:hover,
+.lab-section-card:hover {
+    background-color: rgba(0,255,102,0.06); /* verde muy suave */
+    border-color: rgba(0,255,102,0.5);
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(0,255,102,0.06);
+}
+
+/* TITULOS */
+.cyber-card h2,
+.skill-card h2,
+.experience-card h2,
+.project-card h2,
+.about-card h2,
+.contact-card h2,
+.lab-card h2,
+#education .bg-cyber-surface h3,
+.lab-section-card h4 {
+    color: #00ff66;
+    text-shadow: 0 0 5px rgba(0,255,102,0.45);
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* SUBTITULOS Y TEXTO */
+.cyber-card p,
+.skill-card p,
+.experience-card p,
+.project-card p,
+.about-card p,
+.contact-card p,
+.lab-card p,
+#education .bg-cyber-surface p,
+.lab-section-card h5,
+.lab-section-card p {
+    color: rgba(255,255,255,0.88);
+    line-height: 1.5;
+}
+
+/* LINKS Y BOTONES */
+.project-link,
+.lab-link,
+.lab-section-card a,
+#education .bg-cyber-surface a,
+.cta-primary,
+.cta-secondary {
+    color: #00ff66;
+    text-shadow: 0 0 3px rgba(0,255,102,0.4);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    background-color: rgba(0,255,102,0.12);
+    display: inline-block;
+}
+
+.project-link:hover,
+.lab-link:hover,
+.lab-section-card a:hover,
+#education .bg-cyber-surface a:hover,
+.cta-primary:hover,
+.cta-secondary:hover {
+    background-color: rgba(0,255,102,0.25);
+    box-shadow: 0 6px 15px rgba(0,255,102,0.08);
+    transform: translateY(-2px);
+    letter-spacing: 0.5px;
+}
+
+/* ============================= */
+/* IMAGENES DENTRO DE BLOQUES */
+.cyber-card img,
+.skill-card img,
+.experience-card img,
+.project-card img,
+.about-card img,
+.contact-card img,
+.lab-card img,
+#education .bg-cyber-surface img,
+.lab-section-card img {
+    max-width: 100%;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(31,31,31,0.5);
+    margin-top: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cyber-card img:hover,
+.skill-card img:hover,
+.experience-card img:hover,
+.project-card img:hover,
+.about-card img:hover,
+.contact-card img:hover,
+.lab-card img:hover,
+#education .bg-cyber-surface img:hover,
+.lab-section-card img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0,255,102,0.08);
+}
+
+/* ============================= */
+/* GRID DE LABS */
+.lab-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+/* ============================= */
+/* TYPEWRITER CURSOR */
+.typewriter-cursor {
+    display: inline-block;
+    width: 12px;
+    height: 1em;
+    background-color: #00ff66;
+    vertical-align: middle;
+    margin-left: 4px;
+    animation: blink 1s step-end infinite;
+}
+@keyframes blink { 0%,100%{opacity:1;} 50%{opacity:0;} }
+
+/* ============================= */
+/* FADE IN */
+.fade-in {
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+}
+@keyframes fadeInUp {
+    from { opacity:0; transform: translateY(25px); }
+    to   { opacity:1; transform: translateY(0); }
+}
+
+
+
+
+
+/* ============================= */
+/* NAVBAR TRANSPARENTE CYBERPUNK */
+/* ============================= */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(15, 15, 15, 0.75);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(31, 31, 31, 0.6);
+    z-index: 50;
+    transition: all 0.5s ease;
+    box-shadow: 0 2px 15px rgba(0, 255, 102, 0.05);
+}
+
+nav.scrolled {
+    background: rgba(15, 15, 15, 0.85);
+    box-shadow: 0 4px 20px rgba(0, 255, 102, 0.15);
+    transform: translateY(-2px);
+}
+
+/* NAV CONTAINER */
+nav .max-w-6xl {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+}
+
+/* LOGO / TERMINAL STYLE */
+nav .font-mono.text-cyber-accent {
+    color: #00ff66;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(0,255,102,0.6);
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+nav .font-mono.text-cyber-accent:hover {
+    text-shadow: 0 0 10px rgba(0,255,102,0.9), 0 0 20px rgba(0,255,102,0.4);
+    transform: scale(1.02);
+}
+
+/* NAV LINKS */
+.nav-link {
+    position: relative;
+    font-family: 'JetBrains Mono', monospace;
+    color: rgba(0,255,102,0.8);
+    transition: all 0.3s ease;
+    padding: 0.25rem 0;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 2px;
+    background: #00ff66;
+    border-radius: 1px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 80%;
+    box-shadow: 0 0 6px rgba(0,255,102,0.6);
+}
+
+.nav-link:hover {
+    color: #00ff66;
+    text-shadow: 0 0 5px rgba(0,255,102,0.6);
+}
+
+/* NAV LINK ACTIVE INDICATOR */
+.nav-link.active {
+    color: #00ff66;
+    text-shadow: 0 0 8px rgba(0,255,102,0.8);
+}
+
+.nav-link.active::after {
+    width: 100%;
+    box-shadow: 0 0 8px rgba(0,255,102,0.7);
+}
+
+/* ============================= */
+/* HERO SECTION CYBERPUNK */
+/* ============================= */
+section.min-h-[65vh] {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    text-align: left;
+    position: relative;
+}
+
+/* STATUS BADGE */
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.375rem 0.875rem;
+    border-radius: 9999px;
+    border: 1px solid rgba(0,255,102,0.3);
+    background-color: rgba(0,255,102,0.08);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: #00ff66;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    animation: pulseBadge 2s infinite;
+    transition: all 0.3s ease;
+}
+
+.hero-badge:hover {
+    background-color: rgba(0,255,102,0.15);
+    box-shadow: 0 4px 12px rgba(0,255,102,0.2);
+    transform: translateY(-1px) scale(1.02);
+}
+
+@keyframes pulseBadge {
+    0%, 100% { opacity: 0.9; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.05); }
+}
+
+/* HERO TITLE */
+h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.1;
+    text-shadow: 0 0 10px rgba(0,255,102,0.4), 0 0 20px rgba(0,255,102,0.1);
+    transition: all 0.4s ease;
+}
+
+h1:hover {
+    text-shadow: 0 0 15px rgba(0,255,102,0.6), 0 0 30px rgba(0,255,102,0.2);
+    transform: translateY(-2px);
+}
+
+/* ============================= */
+/* RESPONSIVE NAV */
+@media (max-width: 768px) {
+    nav .hidden.md\\:flex {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* ============================= */
+/* HERO SECTION CENTRALIZADO */
+/* ============================= */
+section.min-h-[65vh] {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* centra horizontal */
+    text-align: center;  /* centra texto */
+    gap: 1.5rem;
+    position: relative;
+    padding: 0 1rem;
+}
+
+/* HERO BADGE */
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.375rem 0.875rem;
+    border-radius: 9999px;
+    border: 1px solid rgba(0,255,102,0.3);
+    background-color: rgba(0,255,102,0.08);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: #00ff66;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    animation: pulseBadge 2s infinite;
+    transition: all 0.3s ease;
+}
+
+.hero-badge:hover {
+    background-color: rgba(0,255,102,0.15);
+    box-shadow: 0 6px 18px rgba(0,255,102,0.2);
+    transform: translateY(-2px) scale(1.03);
+}
+
+@keyframes pulseBadge {
+    0%, 100% { opacity: 0.9; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.05); }
+}
+
+/* HERO TITLE */
+h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.1;
+    text-shadow: 0 0 10px rgba(0,255,102,0.4), 0 0 20px rgba(0,255,102,0.1);
+    transition: all 0.4s ease;
+}
+
+h1:hover {
+    text-shadow: 0 0 15px rgba(0,255,102,0.6), 0 0 30px rgba(0,255,102,0.2);
+    transform: translateY(-2px);
+}
+
+/* HERO DESCRIPCIÓN */
+.hero-description {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.2rem;
+    color: rgba(0,255,102,0.85);
+    line-height: 1.6;
+    max-width: 700px;
+    text-shadow: 0 0 6px rgba(0,255,102,0.2);
+    transition: all 0.4s ease;
+}
+
+.hero-description:hover {
+    text-shadow: 0 0 10px rgba(0,255,102,0.35);
+}
+
+
+
+
+
+
+
+
+
+
+/* ============================================================ */
+/* SECCIÓN WHOAMI / ABOUT - CENTRADO Y ESTILO CYBER */
+/* ============================================================ */
+
+/* Centrado del contenedor principal de la sección */
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente */
+    text-align: center;  /* Centra el título */
+    max-width: 900px;    /* Ancho máximo para que no se desparrame */
+    margin: 0 auto;      /* Centra el bloque en la página */
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* Estilo para la tarjeta 'about-card' */
+.about-card {
+    background-color: rgba(20, 20, 20, 0.55); /* Fondo oscuro traslúcido */
+    backdrop-filter: blur(10px);              /* Desenfoque de fondo */
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(31, 31, 31, 0.6);   /* Borde sutil inicial */
+    border-radius: 1rem;
+    padding: 2.5rem;
+    width: 100%;             /* Ocupa el ancho del contenedor padre */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-align: left;        /* El texto interno se mantiene a la izquierda para legibilidad */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto Hover: Iluminación y Elevación */
+.about-card:hover {
+    background-color: rgba(0, 255, 102, 0.05); /* Tinte verde muy suave */
+    border-color: rgba(0, 255, 102, 0.5);      /* Borde verde neón */
+    transform: translateY(-5px);               /* Pequeño salto hacia arriba */
+    box-shadow: 0 15px 35px rgba(0, 255, 102, 0.1); /* Resplandor verde */
+}
+
+/* Título 'whoami' centrado con brillo */
+#about h2 {
+    text-align: center;
+    width: 100%;
+    text-shadow: 0 0 10px rgba(0, 255, 102, 0.4);
+    font-size: 1.5rem;
+    text-transform: lowercase; /* Estilo terminal */
+}
+
+/* Estilo para la lista de capacidades */
+.about-card ul {
+    list-style: none; /* Quitamos puntos por defecto si los hay */
+    padding-left: 0;
+}
+
+.about-card ul li {
+    color: rgba(0, 255, 102, 0.8) !important; /* Forzamos color de los ítems */
+    font-family: 'JetBrains Mono', monospace;
+    transition: transform 0.2s ease;
+}
+
+.about-card ul li:hover {
+    transform: translateX(8px); /* Efecto de desplazamiento al pasar el ratón */
+    color: #00ff66 !important;
+}
+
+/* Línea divisoria inferior */
+.about-card .border-t {
+    border-color: rgba(0, 255, 102, 0.2) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ============================= */
+/* HERO ENHANCED (GLASS STYLE)   */
+/* ============================= */
+
+/* Contenedor de cristal similar a la imagen */
+.hero-glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 255, 102, 0.2);
+    border-radius: 24px;
+    padding: 3rem 2rem;
+    max-width: 850px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5),
+                0 0 20px rgba(0, 255, 102, 0.05);
+    transition: all 0.5s ease;
+    animation: float 6s ease-in-out infinite; /* Movimiento suave */
+}
+
+.hero-glass-card:hover {
+    border-color: rgba(0, 255, 102, 0.5);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 30px rgba(0, 255, 102, 0.15);
+    transform: translateY(-10px);
+}
+
+/* Párrafo expandido */
+.hero-description-expanded {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-description-expanded strong {
+    color: #00ff66;
+    font-weight: 500;
+}
+
+/* Divisor estético */
+.hero-divider {
+    height: 1px;
+    width: 60px;
+    background: #00ff66;
+    margin: 0 auto 2rem;
+    box-shadow: 0 0 10px #00ff66;
+}
+
+/* Etiquetas de habilidades */
+.hero-tags {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.hero-tags span {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    color: #00ff66;
+    opacity: 0.7;
+}
+
+/* Punto de pulso en el Badge */
+.pulse-dot {
+    height: 8px;
+    width: 8px;
+    background-color: #00ff66;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+    box-shadow: 0 0 8px #00ff66;
+    animation: pulseBadge 2s infinite;
+}
+
+/* Animación de flotación */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
