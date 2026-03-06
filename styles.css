@@ -837,3 +837,202 @@ h1:hover {
         gap: 4px !important;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+```css id="mblfixcyber"
+
+/* ===================================================== */
+/* MOBILE OPTIMIZATION ONLY */
+/* ===================================================== */
+
+@media (max-width: 768px) {
+
+    /* ===================================== */
+    /* HERO ROLE BADGE FIX (MOBILE) */
+    /* ===================================== */
+
+    .hero-badge {
+        font-size: 11px;
+        padding: 7px 12px;
+
+        margin-top: 28px !important;
+        margin-bottom: 18px !important;
+
+        max-width: 90%;
+        text-align: center;
+
+        line-height: 1.3;
+
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .pulse-dot {
+        width: 7px;
+        height: 7px;
+    }
+
+
+    /* ===================================== */
+    /* EDUCATION GRID MOBILE */
+    /* ===================================== */
+
+    #education .grid,
+    .education-grid-container {
+
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+
+        gap: 14px !important;
+        align-items: stretch;
+    }
+
+
+    /* ===================================== */
+    /* CERTIFICATE CARD */
+    /* ===================================== */
+
+    #education .bg-cyber-surface {
+
+        display: flex;
+        flex-direction: column;
+
+        padding: 12px !important;
+
+        min-height: 210px;
+
+        gap: 8px;
+    }
+
+
+    /* ===================================== */
+    /* CERTIFICATE TITLE */
+    /* ===================================== */
+
+    #education .bg-cyber-surface h3 {
+
+        font-size: 13px !important;
+
+        line-height: 1.2;
+
+        min-height: 36px;
+
+        display: flex;
+        align-items: center;
+
+        overflow: hidden;
+    }
+
+
+    /* ===================================== */
+    /* CERTIFICATE IMAGE */
+    /* ===================================== */
+
+   #education .bg-cyber-surface img {
+
+    width: 100% !important;
+
+    aspect-ratio: 16 / 9;   /* hace la imagen horizontal */
+
+    object-fit: cover;
+
+    border-radius: 6px;
+
+    margin: 6px 0 !important;
+}
+
+
+    /* ===================================== */
+    /* CERTIFICATE DESCRIPTION */
+    /* ===================================== */
+
+    #education .bg-cyber-surface p {
+
+        font-size: 11px;
+
+        line-height: 1.35;
+
+        opacity: 0.9;
+    }
+
+
+    /* ===================================== */
+    /* CERTIFICATE BUTTON */
+    /* ===================================== */
+
+    #education .bg-cyber-surface a,
+    .view_certificate {
+
+        font-size: 10px !important;
+
+        padding: 6px 8px !important;
+
+        margin-top: auto;
+
+        text-align: center;
+
+        width: 100%;
+    }
+
+}
+
+
+/* ===================================================== */
+/* SMALL PHONES */
+/* ===================================================== */
+
+@media (max-width: 420px) {
+
+    .hero-badge {
+
+        font-size: 10px;
+
+        padding: 6px 10px;
+
+        margin-top: 24px !important;
+    }
+
+    #education .bg-cyber-surface img {
+
+        height: 85px !important;
+
+    }
+
+}
+
+
+/* ===================================================== */
+/* EXTRA SMALL DEVICES */
+/* ===================================================== */
+
+@media (max-width: 360px) {
+
+    #education .grid,
+    .education-grid-container {
+
+        grid-template-columns: 1fr !important;
+
+    }
+
+}
+```
+
+
+
+
+
+
+
